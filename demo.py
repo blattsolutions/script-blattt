@@ -69,7 +69,6 @@ async def fetch(session, url):
 async def main():
     urls = [i for i in range(1, num_pages + 1)]
     tasks = []
-    clist = []
     async with aiohttp.ClientSession() as session:
         for url in urls:
             tasks.append(fetch(session, url))
